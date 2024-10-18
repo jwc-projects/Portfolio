@@ -107,6 +107,26 @@ const theme = createTheme({
         color: "textPrimary",
       },
     },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          fontFamily: "Montserrat",
+          fontSize: 10,
+          fontWeight: 700,
+          letterSpacing: 6,
+          lineHeight: "auto",
+          display: "inline-block",
+          ":focus-visible": {
+            outlineWidth: 2,
+            outlineStyle: "solid",
+            outlineOffset: 2,
+          },
+          "::first-letter": {
+            marginLeft: "0.30rem",
+          },
+        },
+      },
+    },
   },
 });
 
