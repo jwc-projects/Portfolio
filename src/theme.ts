@@ -1,5 +1,18 @@
-import { createTheme } from "@mui/material";
+import { createTheme, PaletteColor, PaletteColorOptions } from "@mui/material";
 
+declare module "@mui/material/styles" {
+  interface PaletteOptions {
+    default?: PaletteColorOptions;
+    inverted?: PaletteColorOptions;
+  }
+}
+
+declare module "@mui/material" {
+  interface Palette {
+    default: PaletteColor;
+    inverted: PaletteColor;
+  }
+}
 const BREAKPOINTS = {
   xs: 0,
   sm: 600,
@@ -11,9 +24,20 @@ const BREAKPOINTS = {
 const theme = createTheme({
   breakpoints: { values: BREAKPOINTS },
   palette: {
+    mode: "light",
+    common: {
+      black: "#262626",
+      white: "#FFFFFF",
+    },
     text: {
       primary: "#262626",
       secondary: "#FFFFFF",
+    },
+    default: {
+      main: "#262626",
+    },
+    inverted: {
+      main: "#FFFFFF",
     },
     primary: {
       main: "#2C6396",
