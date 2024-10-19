@@ -1,18 +1,22 @@
-import { createTheme, PaletteColor, PaletteColorOptions } from "@mui/material";
+import { createTheme } from "@mui/material";
 
 declare module "@mui/material/styles" {
   interface PaletteOptions {
-    default?: PaletteColorOptions;
-    inverted?: PaletteColorOptions;
+    default?: PaletteOptions["primary"];
+    inverted?: PaletteOptions["primary"];
+  }
+  interface Palette {
+    default: Palette["primary"];
+    inverted: Palette["primary"];
   }
 }
 
-declare module "@mui/material" {
-  interface Palette {
-    default: PaletteColor;
-    inverted: PaletteColor;
+declare module "@mui/material/Button" {
+  interface ButtonPropsColorOverrides {
+    default: true;
   }
 }
+
 const BREAKPOINTS = {
   xs: 0,
   sm: 600,
@@ -107,6 +111,62 @@ const theme = createTheme({
         color: "textPrimary",
       },
     },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          fontFamily: "Montserrat",
+          fontWeight: 700,
+          lineHeight: "auto",
+          textTransform: "uppercase",
+          display: "inline-block",
+          marginLeft: 10,
+          marginRight: 10,
+          paddingTop: 2,
+          paddingBottom: 2,
+          paddingLeft: 5,
+          paddingRight: 5,
+          "::first-letter": {
+            marginLeft: "0.30rem",
+          },
+          "&::before": {
+            content: "' '",
+            width: 2,
+            top: 0,
+            bottom: 0,
+            left: -8,
+            position: "absolute",
+            transition: "all 0.2s ease 0s",
+          },
+          "&::after": {
+            content: "' '",
+            bottom: 0,
+            right: -8,
+            position: "absolute",
+            top: 0,
+            width: 2,
+            transition: "all 0.2s ease 0s",
+          },
+          "&:hover::before,&:focus::before": {
+            left: 0,
+          },
+          "&:hover::after,&:focus::after": {
+            right: 0,
+          },
+        },
+        sizeSmall: {
+          fontSize: 10,
+          letterSpacing: 6,
+        },
+        sizeMedium: {
+          fontSize: 12,
+          letterSpacing: 6,
+        },
+        sizeLarge: {
+          fontSize: 14,
+          letterSpacing: 6,
+        },
+      },
+    },
     MuiLink: {
       styleOverrides: {
         root: {
@@ -115,14 +175,49 @@ const theme = createTheme({
           fontWeight: 700,
           letterSpacing: 6,
           lineHeight: "auto",
+          textTransform: "uppercase",
           display: "inline-block",
+          cursor: "pointer",
+          marginLeft: 10,
+          marginRight: 10,
+          paddingTop: 2,
+          paddingBottom: 2,
+          paddingLeft: 5,
+          paddingRight: 5,
+          position: "relative",
+          transition: "all 0.2s ease 0.2s",
           ":focus-visible": {
-            outlineWidth: 2,
-            outlineStyle: "solid",
+            outlineColor: "#005FCC",
             outlineOffset: 2,
+            outlineStyle: "solid",
+            outlineWidth: 2,
           },
           "::first-letter": {
             marginLeft: "0.30rem",
+          },
+          "&::before": {
+            content: "' '",
+            bottom: 0,
+            left: -8,
+            position: "absolute",
+            top: 0,
+            width: 2,
+            transition: "all 0.2s ease 0s",
+          },
+          "&::after": {
+            content: "' '",
+            bottom: 0,
+            right: -8,
+            position: "absolute",
+            top: 0,
+            width: 2,
+            transition: "all 0.2s ease 0s",
+          },
+          "&:hover::before,&:focus::before": {
+            left: 0,
+          },
+          "&:hover::after,&:focus::after": {
+            right: 0,
           },
         },
       },
