@@ -39,6 +39,7 @@ const theme = createTheme({
     },
     default: {
       main: "#262626",
+      light: "#EEEEEE",
     },
     inverted: {
       main: "#FFFFFF",
@@ -62,6 +63,20 @@ const theme = createTheme({
   typography: {
     htmlFontSize: 14,
     fontFamily: "Open Sans",
+    body1: {
+      fontFamily: "Open Sans",
+      fontSize: 14,
+      lineHeight: 1.4,
+      fontWeight: 400,
+      letterSpacing: 0,
+    },
+    caption: {
+      fontFamily: "Open Sans",
+      fontSize: 14,
+      lineHeight: 1.4,
+      fontWeight: 300,
+      letterSpacing: 0,
+    },
     h1: {
       fontFamily: "Montserrat",
       fontSize: 24,
