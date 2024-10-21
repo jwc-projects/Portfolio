@@ -18,10 +18,18 @@ function App() {
         Click me!
       </MuiButton>
       <Box>
-        <MuiLink href="/">Link</MuiLink>
-        <MuiLink href="/">Link</MuiLink>
-        <MuiLink href="/">Link</MuiLink>
-        <MuiLink href="/">Link</MuiLink>
+        <Box sx={{ backgroundColor: "default.main", padding: 5 }}>
+          <MuiLink href="/" inverted>
+            Link
+          </MuiLink>
+          <MuiLink href="/" inverted>
+            Link
+          </MuiLink>
+        </Box>
+        <Box sx={{ backgroundColor: "inverted.main", padding: 5 }}>
+          <MuiLink href="/">Link</MuiLink>
+          <MuiLink href="/">Link</MuiLink>
+        </Box>
       </Box>
       <Quote title="Lorem Ipsum" author="JW Consulting">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, labore

@@ -1,10 +1,17 @@
 import { Link, styled } from "@mui/material";
+import { MuiLinkProps } from ".";
 
-const StyledLink = styled(Link)(({ theme }) => ({
-  backgroundColor: theme.palette.inverted.main,
-  borderBottomColor: theme.palette.inverted.main,
-  borderTopColor: theme.palette.inverted.main,
-  color: theme.palette.default.main,
+const StyledLink = styled(Link)<MuiLinkProps>(({ theme, inverted }) => ({
+  backgroundColor: inverted
+    ? theme.palette.default.main
+    : theme.palette.inverted.main,
+  borderBottomColor: inverted
+    ? theme.palette.default.main
+    : theme.palette.inverted.main,
+  borderTopColor: inverted
+    ? theme.palette.default.main
+    : theme.palette.inverted.main,
+  color: inverted ? theme.palette.inverted.main : theme.palette.default.main,
   fontFamily: "Montserrat",
   fontSize: 10,
   fontWeight: 700,
@@ -22,7 +29,9 @@ const StyledLink = styled(Link)(({ theme }) => ({
   cursor: "pointer",
   transition: "all 0.2s ease 0.2s",
   ":focus-visible": {
-    outlineColor: "#005FCC",
+    outlineColor: inverted
+      ? theme.palette.inverted.main
+      : theme.palette.default.main,
     outlineOffset: 2,
     outlineStyle: "solid",
     outlineWidth: 2,
@@ -31,9 +40,13 @@ const StyledLink = styled(Link)(({ theme }) => ({
     marginLeft: "0.30rem",
   },
   ":hover,:focus": {
-    backgroundColor: theme.palette.default.main,
-    borderColor: theme.palette.default.main,
-    color: theme.palette.inverted.main,
+    backgroundColor: inverted
+      ? theme.palette.inverted.main
+      : theme.palette.default.main,
+    borderColor: inverted
+      ? theme.palette.inverted.main
+      : theme.palette.default.main,
+    color: inverted ? theme.palette.default.main : theme.palette.inverted.main,
     "&::before": {
       left: 0,
     },
@@ -49,7 +62,9 @@ const StyledLink = styled(Link)(({ theme }) => ({
     top: 0,
     width: 2,
     transition: "all 0.2s ease 0s",
-    backgroundColor: theme.palette.default.main,
+    backgroundColor: inverted
+      ? theme.palette.inverted.main
+      : theme.palette.default.main,
   },
   "::after": {
     content: "' '",
@@ -59,7 +74,9 @@ const StyledLink = styled(Link)(({ theme }) => ({
     top: 0,
     width: 2,
     transition: "all 0.2s ease 0s",
-    backgroundColor: theme.palette.default.main,
+    backgroundColor: inverted
+      ? theme.palette.inverted.main
+      : theme.palette.default.main,
   },
 }));
 
