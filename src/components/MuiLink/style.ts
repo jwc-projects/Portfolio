@@ -1,17 +1,17 @@
 import { Link, styled } from "@mui/material";
 import { MuiLinkProps } from ".";
 
-const StyledLink = styled(Link)<MuiLinkProps>(({ theme, inverted }) => ({
-  backgroundColor: inverted
+const StyledLink = styled(Link)<MuiLinkProps>(({ theme, isInverted }) => ({
+  backgroundColor: isInverted
     ? theme.palette.default.main
     : theme.palette.inverted.main,
-  borderBottomColor: inverted
+  borderBottomColor: isInverted
     ? theme.palette.default.main
     : theme.palette.inverted.main,
-  borderTopColor: inverted
+  borderTopColor: isInverted
     ? theme.palette.default.main
     : theme.palette.inverted.main,
-  color: inverted ? theme.palette.inverted.main : theme.palette.default.main,
+  color: isInverted ? theme.palette.inverted.main : theme.palette.default.main,
   fontFamily: "Montserrat",
   fontSize: 10,
   fontWeight: 700,
@@ -29,7 +29,7 @@ const StyledLink = styled(Link)<MuiLinkProps>(({ theme, inverted }) => ({
   cursor: "pointer",
   transition: "all 0.2s ease 0.2s",
   ":focus-visible": {
-    outlineColor: inverted
+    outlineColor: isInverted
       ? theme.palette.inverted.main
       : theme.palette.default.main,
     outlineOffset: 2,
@@ -40,13 +40,15 @@ const StyledLink = styled(Link)<MuiLinkProps>(({ theme, inverted }) => ({
     marginLeft: "0.30rem",
   },
   ":hover,:focus": {
-    backgroundColor: inverted
+    backgroundColor: isInverted
       ? theme.palette.inverted.main
       : theme.palette.default.main,
-    borderColor: inverted
+    borderColor: isInverted
       ? theme.palette.inverted.main
       : theme.palette.default.main,
-    color: inverted ? theme.palette.default.main : theme.palette.inverted.main,
+    color: isInverted
+      ? theme.palette.default.main
+      : theme.palette.inverted.main,
     "&::before": {
       left: 0,
     },
@@ -62,7 +64,7 @@ const StyledLink = styled(Link)<MuiLinkProps>(({ theme, inverted }) => ({
     top: 0,
     width: 2,
     transition: "all 0.2s ease 0s",
-    backgroundColor: inverted
+    backgroundColor: isInverted
       ? theme.palette.inverted.main
       : theme.palette.default.main,
   },
@@ -74,7 +76,7 @@ const StyledLink = styled(Link)<MuiLinkProps>(({ theme, inverted }) => ({
     top: 0,
     width: 2,
     transition: "all 0.2s ease 0s",
-    backgroundColor: inverted
+    backgroundColor: isInverted
       ? theme.palette.inverted.main
       : theme.palette.default.main,
   },

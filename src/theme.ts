@@ -40,9 +40,11 @@ const theme = createTheme({
     default: {
       main: "#262626",
       light: "#EEEEEE",
+      contrastText: "#FFFFFF",
     },
     inverted: {
       main: "#FFFFFF",
+      contrastText: "#262626",
     },
     primary: {
       main: "#2C6396",

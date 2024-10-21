@@ -3,14 +3,14 @@ import { LinkProps } from "@mui/material";
 import StyledLink from "./style";
 
 export interface MuiLinkProps extends LinkProps {
-  inverted?: boolean;
+  isInverted?: boolean;
 }
 const MuiLink: FunctionComponent<PropsWithChildren<MuiLinkProps>> = ({
-  inverted = false,
+  isInverted = false,
   ...props
 }) => {
   return (
-    <StyledLink {...props} underline="none" inverted={inverted}>
+    <StyledLink {...props} underline="none" isInverted={isInverted}>
       {props.children}
     </StyledLink>
   );
