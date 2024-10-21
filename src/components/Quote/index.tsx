@@ -7,12 +7,14 @@ interface QuoteProps {
   content?: string;
   author?: string;
   alignment?: Alignment;
+  isInverted?: boolean;
 }
 const Quote: FunctionComponent<PropsWithChildren<QuoteProps>> = ({
   alignment = "left",
   author,
   children,
   title,
+  isInverted,
 }) => {
   return (
     <Box
@@ -31,17 +33,31 @@ const Quote: FunctionComponent<PropsWithChildren<QuoteProps>> = ({
       }}
     >
       {title && (
-        <Typography variant="h6" component="h3" mb={1}>
+        <Typography
+          variant="h6"
+          component="h3"
+          mb={1}
+          color={isInverted ? "default.contrastText" : "inverted.contrastText"}
+        >
           {title}
         </Typography>
       )}
       {children && (
-        <Typography variant="caption" component="p" mb={1}>
+        <Typography
+          variant="caption"
+          component="p"
+          mb={1}
+          color={isInverted ? "default.contrastText" : "inverted.contrastText"}
+        >
           {children}
         </Typography>
       )}
       {author && (
-        <Typography variant="caption" component="p">
+        <Typography
+          variant="caption"
+          component="p"
+          color={isInverted ? "default.contrastText" : "inverted.contrastText"}
+        >
           - {author}
         </Typography>
       )}
