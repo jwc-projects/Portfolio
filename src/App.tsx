@@ -8,13 +8,13 @@ function App() {
       <MuiButton color="default" size="small">
         Click me!
       </MuiButton>
-      <MuiButton color="primary" size="small">
+      <MuiButton color="primary" size="medium">
         Click me!
       </MuiButton>
-      <MuiButton color="success" size="small">
+      <MuiButton color="success" size="large">
         Click me!
       </MuiButton>
-      <MuiButton color="error" size="small">
+      <MuiButton color="error" size="large">
         Click me!
       </MuiButton>
       <Box>
