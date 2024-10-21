@@ -3,7 +3,7 @@ import StyledLink from "./style";
 
 const MuiLink = (props: LinkProps) => {
   return (
-    <StyledLink href={props.href} underline="none">
+    <StyledLink {...props} underline="none">
       {props.children}
     </StyledLink>
   );
