@@ -2,7 +2,33 @@ import { Button, styled } from "@mui/material";
 
 const StyledButton = styled(Button)(({ color, theme }) => ({
   borderRadius: "initial",
-  "&:hover,&:focus": {
+  fontFamily: "Montserrat",
+  fontWeight: 700,
+  lineHeight: "auto",
+  textTransform: "uppercase",
+  display: "inline-block",
+  marginLeft: 10,
+  marginRight: 10,
+  paddingTop: 2,
+  paddingBottom: 2,
+  paddingLeft: 5,
+  paddingRight: 5,
+  "&.MuiButton-sizeSmall": {
+    fontSize: 10,
+    letterSpacing: 6,
+  },
+  "&.MuiButton-sizeMedium": {
+    fontSize: 12,
+    letterSpacing: 6,
+  },
+  "&.MuiButton-sizeLarge": {
+    fontSize: 14,
+    letterSpacing: 6,
+  },
+  "::first-letter": {
+    marginLeft: "0.30rem",
+  },
+  ":hover,:focus": {
     backgroundColor: color
       ? // @ts-ignore
         theme.palette[color].main
@@ -15,14 +41,34 @@ const StyledButton = styled(Button)(({ color, theme }) => ({
       ? // @ts-ignore
         theme.palette.text.secondary
       : theme.palette.inverted.main,
+    "&::before": {
+      left: 0,
+    },
+    "&::after": {
+      right: 0,
+    },
   },
-  "&::before": {
+  "::before": {
+    content: "' '",
+    width: 2,
+    top: 0,
+    bottom: 0,
+    left: -8,
+    position: "absolute",
+    transition: "all 0.2s ease 0s",
     backgroundColor: color
       ? // @ts-ignore
         theme.palette[color].main
       : theme.palette.default.main,
   },
-  "&::after": {
+  "::after": {
+    content: "' '",
+    bottom: 0,
+    right: -8,
+    position: "absolute",
+    top: 0,
+    width: 2,
+    transition: "all 0.2s ease 0s",
     backgroundColor: color
       ? // @ts-ignore
         theme.palette[color].main
