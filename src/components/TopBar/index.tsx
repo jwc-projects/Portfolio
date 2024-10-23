@@ -38,7 +38,7 @@ const TopBar = () => {
       <Box display="block">
         <LogoDevIcon fontSize="large" className="color-default" />
       </Box>
-      <Box>TODO: Add links</Box>
+      <Box component="nav">TODO: Add links</Box>
     </Box>
   );
   const MobileBar = (
