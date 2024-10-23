@@ -1,10 +1,11 @@
 import { Box, Typography } from "@mui/material";
-import { MuiButton, MuiLink, Quote, Section } from "./components";
+import { MuiButton, MuiLink, Quote, Section, TopBar } from "./components";
 import StarryNightImageLg from "./images/winter-night-sky-large.jpg";
 
 function App() {
   return (
     <>
+      <TopBar />
       <Section>
         <Typography variant="h1">Hello World!</Typography>
       </Section>
