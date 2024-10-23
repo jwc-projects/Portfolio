@@ -1,6 +1,8 @@
 import { Button, styled } from "@mui/material";
 
-const StyledButton = styled(Button)(({ color, theme }) => ({
+const StyledButton = styled(Button, {
+  shouldForwardProp: (name) => name !== "isInverted",
+})(({ color, theme }) => ({
   borderRadius: "initial",
   fontFamily: "Montserrat",
   fontWeight: 700,

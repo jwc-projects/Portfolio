@@ -1,7 +1,9 @@
 import { Link, styled } from "@mui/material";
 import { MuiLinkProps } from ".";
 
-const StyledLink = styled(Link)<MuiLinkProps>(({ theme, isInverted }) => ({
+const StyledLink = styled(Link, {
+  shouldForwardProp: (name) => name !== "isInverted",
+})<MuiLinkProps>(({ theme, isInverted }) => ({
   backgroundColor: isInverted
     ? theme.palette.default.main
     : theme.palette.inverted.main,
