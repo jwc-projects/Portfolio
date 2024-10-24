@@ -167,7 +167,7 @@ function App() {
             columnGap={11}
             flexDirection={{ xs: "column", md: "row" }}
           >
-            <Box flex="1 1 0">
+            <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
               <img src={StarryNightImageLg} role="presentation" width="100%" />
             </Box>
             <Box flex="1 1 0">
