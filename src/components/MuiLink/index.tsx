@@ -4,11 +4,11 @@ import StyledLink from "./style";
 
 export interface MuiLinkProps extends LinkProps {
   isInverted?: boolean;
-  transitionTime?: number;
+  transition?: string;
 }
 const MuiLink: FunctionComponent<PropsWithChildren<MuiLinkProps>> = ({
   isInverted = false,
-  transitionTime = 0.2,
+  transition,
   ...props
 }) => {
   return (
@@ -16,7 +16,7 @@ const MuiLink: FunctionComponent<PropsWithChildren<MuiLinkProps>> = ({
       {...props}
       underline="none"
       isInverted={isInverted}
-      transitionTime={transitionTime}
+      transition={transition}
     >
       {props.children}
     </StyledLink>

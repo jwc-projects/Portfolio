@@ -7,16 +7,25 @@ const StyledAppBar = styled(AppBar, {
     ? theme.palette.default.main
     : theme.palette.inverted.main,
   minHeight: isElevated ? 56 : 72,
-  transition: "all 0.5s ease",
+  transition: theme.transitions.create("all", {
+    duration: theme.transitions.duration.complex,
+    easing: theme.transitions.easing.easeInOut,
+  }),
   ".MuiToolbar-root": {
     minHeight: isElevated ? 56 : 72,
-    transition: "all 0.5s ease",
+    transition: theme.transitions.create("all", {
+      duration: theme.transitions.duration.complex,
+      easing: theme.transitions.easing.easeInOut,
+    }),
   },
   ".color-default": {
     color: isElevated
       ? theme.palette.inverted.main
       : theme.palette.default.main,
-    transition: "all 0.5s ease",
+    transition: theme.transitions.create("all", {
+      duration: theme.transitions.duration.complex,
+      easing: theme.transitions.easing.easeInOut,
+    }),
   },
 }));
 

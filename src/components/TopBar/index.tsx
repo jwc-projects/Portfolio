@@ -26,6 +26,10 @@ const TopBar = () => {
     threshold: theme.breakpoints.up("md") ? 56 : 48,
     target: window,
   });
+  const transition = theme.transitions.create("all", {
+    duration: theme.transitions.duration.complex,
+    easing: theme.transitions.easing.easeInOut,
+  });
   const onToggleMobileMenu = () => {
     setIsOpen((prevState) => !prevState);
   };
@@ -40,13 +44,25 @@ const TopBar = () => {
         <LogoDevIcon fontSize="large" className="color-default" />
       </Box>
       <Box component="nav">
-        <MuiLink href="/" isInverted={isScrollTriggered} transitionTime={0.5}>
+        <MuiLink
+          href="/"
+          isInverted={isScrollTriggered}
+          transition={transition}
+        >
           Home
         </MuiLink>
-        <MuiLink href="/" isInverted={isScrollTriggered} transitionTime={0.5}>
+        <MuiLink
+          href="/"
+          isInverted={isScrollTriggered}
+          transition={transition}
+        >
           About
         </MuiLink>
-        <MuiLink href="/" isInverted={isScrollTriggered} transitionTime={0.5}>
+        <MuiLink
+          href="/"
+          isInverted={isScrollTriggered}
+          transition={transition}
+        >
           Reviews
         </MuiLink>
       </Box>
@@ -90,17 +106,17 @@ const TopBar = () => {
         paddingTop={2}
       >
         <Box padding={1}>
-          <MuiLink href="/" transitionTime={0.5}>
+          <MuiLink href="/" transition={transition}>
             Home
           </MuiLink>
         </Box>
         <Box padding={1}>
-          <MuiLink href="/" transitionTime={0.5}>
+          <MuiLink href="/" transition={transition}>
             About
           </MuiLink>
         </Box>
         <Box padding={1}>
-          <MuiLink href="/" transitionTime={0.5}>
+          <MuiLink href="/" transition={transition}>
             Reviews
           </MuiLink>
         </Box>

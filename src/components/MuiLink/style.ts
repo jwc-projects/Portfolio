@@ -3,8 +3,8 @@ import { MuiLinkProps } from ".";
 
 const StyledLink = styled(Link, {
   shouldForwardProp: (name: string) =>
-    !["isInverted", "transitionTime"].includes(name),
-})<MuiLinkProps>(({ theme, isInverted, transitionTime }) => ({
+    !["isInverted", "transition"].includes(name),
+})<MuiLinkProps>(({ theme, isInverted, transition }) => ({
   backgroundColor: isInverted
     ? theme.palette.default.main
     : theme.palette.inverted.main,
@@ -30,7 +30,12 @@ const StyledLink = styled(Link, {
   paddingRight: 5,
   position: "relative",
   cursor: "pointer",
-  transition: `all ${transitionTime}s ease`,
+  transition:
+    transition ||
+    theme.transitions.create("all", {
+      duration: theme.transitions.duration.shorter,
+      easing: theme.transitions.easing.easeInOut,
+    }),
   ":focus-visible": {
     outlineColor: isInverted
       ? theme.palette.inverted.main
@@ -66,7 +71,12 @@ const StyledLink = styled(Link, {
     position: "absolute",
     top: 0,
     width: 2,
-    transition: `all ${transitionTime}s ease`,
+    transition:
+      transition ||
+      theme.transitions.create("all", {
+        duration: theme.transitions.duration.shorter,
+        easing: theme.transitions.easing.easeInOut,
+      }),
     backgroundColor: isInverted
       ? theme.palette.inverted.main
       : theme.palette.default.main,
@@ -78,7 +88,12 @@ const StyledLink = styled(Link, {
     position: "absolute",
     top: 0,
     width: 2,
-    transition: `all ${transitionTime}s ease`,
+    transition:
+      transition ||
+      theme.transitions.create("all", {
+        duration: theme.transitions.duration.shorter,
+        easing: theme.transitions.easing.easeInOut,
+      }),
     backgroundColor: isInverted
       ? theme.palette.inverted.main
       : theme.palette.default.main,

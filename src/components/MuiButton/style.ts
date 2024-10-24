@@ -57,7 +57,10 @@ const StyledButton = styled(Button, {
     bottom: 0,
     left: -8,
     position: "absolute",
-    transition: "all 0.2s ease 0s",
+    transition: theme.transitions.create("all", {
+      duration: theme.transitions.duration.shorter,
+      easing: theme.transitions.easing.easeInOut,
+    }),
     backgroundColor: color
       ? // @ts-ignore
         theme.palette[color].main
@@ -70,7 +73,10 @@ const StyledButton = styled(Button, {
     position: "absolute",
     top: 0,
     width: 2,
-    transition: "all 0.2s ease 0s",
+    transition: theme.transitions.create("all", {
+      duration: theme.transitions.duration.shorter,
+      easing: theme.transitions.easing.easeInOut,
+    }),
     backgroundColor: color
       ? // @ts-ignore
         theme.palette[color].main
