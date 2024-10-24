@@ -2,8 +2,9 @@ import { Link, styled } from "@mui/material";
 import { MuiLinkProps } from ".";
 
 const StyledLink = styled(Link, {
-  shouldForwardProp: (name) => name !== "isInverted",
-})<MuiLinkProps>(({ theme, isInverted }) => ({
+  shouldForwardProp: (name: string) =>
+    !["isInverted", "transitionTime"].includes(name),
+})<MuiLinkProps>(({ theme, isInverted, transitionTime }) => ({
   backgroundColor: isInverted
     ? theme.palette.default.main
     : theme.palette.inverted.main,
@@ -29,7 +30,7 @@ const StyledLink = styled(Link, {
   paddingRight: 5,
   position: "relative",
   cursor: "pointer",
-  transition: "all 0.2s ease 0.2s",
+  transition: `all ${transitionTime}s ease`,
   ":focus-visible": {
     outlineColor: isInverted
       ? theme.palette.inverted.main
@@ -65,7 +66,7 @@ const StyledLink = styled(Link, {
     position: "absolute",
     top: 0,
     width: 2,
-    transition: "all 0.2s ease 0s",
+    transition: `all ${transitionTime}s ease`,
     backgroundColor: isInverted
       ? theme.palette.inverted.main
       : theme.palette.default.main,
@@ -77,7 +78,7 @@ const StyledLink = styled(Link, {
     position: "absolute",
     top: 0,
     width: 2,
-    transition: "all 0.2s ease 0s",
+    transition: `all ${transitionTime}s ease`,
     backgroundColor: isInverted
       ? theme.palette.inverted.main
       : theme.palette.default.main,
