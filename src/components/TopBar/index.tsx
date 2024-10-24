@@ -13,6 +13,7 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
 import MenuIcon from "@mui/icons-material/Menu";
+import { MuiLink } from "../";
 import StyledAppBar from "./style";
 
 const Offset = styled("div")(({ theme }) => theme.mixins.toolbar);
@@ -38,7 +39,17 @@ const TopBar = () => {
       <Box display="block">
         <LogoDevIcon fontSize="large" className="color-default" />
       </Box>
-      <Box component="nav">TODO: Add links</Box>
+      <Box component="nav">
+        <MuiLink href="/" isInverted={isScrollTriggered} transitionTime={0.5}>
+          Home
+        </MuiLink>
+        <MuiLink href="/" isInverted={isScrollTriggered} transitionTime={0.5}>
+          About
+        </MuiLink>
+        <MuiLink href="/" isInverted={isScrollTriggered} transitionTime={0.5}>
+          Reviews
+        </MuiLink>
+      </Box>
     </Box>
   );
   const MobileBar = (
@@ -48,9 +59,7 @@ const TopBar = () => {
       justifyContent="space-between"
       width="100%"
     >
-      <Box display="block">
-        <LogoDevIcon fontSize="large" className="color-default" />
-      </Box>
+      <LogoDevIcon fontSize="large" className="color-default" />
       <IconButton
         className="color-default"
         onClick={onToggleMobileMenu}
@@ -62,17 +71,39 @@ const TopBar = () => {
   );
   const MobileMenu = (
     <Box paddingX={2} paddingY={3} component="nav">
-      <Box display="flex" justifyContent="space-between">
-        <Box display="block">
-          <LogoDevIcon fontSize="large" className="color-default" />
-        </Box>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        paddingBottom={1}
+      >
+        <LogoDevIcon fontSize="large" className="color-default" />
         <IconButton aria-label="Close menu" onClick={onToggleMobileMenu}>
           <CloseIcon />
         </IconButton>
       </Box>
       <Divider />
-      <Box display="flex" flexDirection="column" justifyContent="flex-end">
-        TODO: Add links
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="flex-end"
+        paddingTop={2}
+      >
+        <Box padding={1}>
+          <MuiLink href="/" transitionTime={0.5}>
+            Home
+          </MuiLink>
+        </Box>
+        <Box padding={1}>
+          <MuiLink href="/" transitionTime={0.5}>
+            About
+          </MuiLink>
+        </Box>
+        <Box padding={1}>
+          <MuiLink href="/" transitionTime={0.5}>
+            Reviews
+          </MuiLink>
+        </Box>
       </Box>
     </Box>
   );
