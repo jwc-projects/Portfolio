@@ -1,4 +1,4 @@
-FROM node:22.9.9
+FROM node:22.9.0
 WORKDIR /portfolio-app
 COPY package.json .
 RUN npm install
