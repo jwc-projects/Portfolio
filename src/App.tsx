@@ -8,11 +8,42 @@ function App() {
       <TopBar />
       <main>
         <Section>
+          <Box
+            display="flex"
+            alignItems="center"
+            columnGap={11}
+            flexDirection={{ xs: "column", md: "row" }}
+          >
+            <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
+              <img src={StarryNightImageLg} role="presentation" width="100%" />
+            </Box>
+            <Box flex="1 1 0">
+              <Typography
+                component="h2"
+                variant="h2"
+                color="inverted.contrastText"
+                mb={2}
+              >
+                Experience
+              </Typography>
+              <Typography component="p" color="inverted.contrastText" mb={2}>
+                Navigating the digital marketplace is a huge challenge. You need
+                someone on your side with experience delivering against complex
+                requirements and tight deadlines. For nearly 6 years, I've been
+                delivering for some of the largest clients in the world. I'll
+                listen to your project's needs and goals and use them to craft
+                the website you need to enhance your business.
+              </Typography>
+            </Box>
+          </Box>
+        </Section>
+        <Section id="home">
           <Typography component="h1" variant="h1">
             JW Web Services
           </Typography>
         </Section>
         <Section
+          id="services"
           isInverted
           sx={{
             ".MuiSkeleton-root": {
@@ -193,7 +224,7 @@ function App() {
             </Box>
           </Box>
         </Section>
-        <Section isInverted>
+        <Section isInverted id="reviews">
           <Typography component="h2" variant="h2" mb={2} color="inveted.main">
             Reviews
           </Typography>

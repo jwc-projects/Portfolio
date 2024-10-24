@@ -45,21 +45,21 @@ const TopBar = () => {
       </Box>
       <Box component="nav">
         <MuiLink
-          href="/"
+          href="#home"
           isInverted={isScrollTriggered}
           transition={transition}
         >
           Home
         </MuiLink>
         <MuiLink
-          href="/"
+          href="#services"
           isInverted={isScrollTriggered}
           transition={transition}
         >
-          About
+          Services
         </MuiLink>
         <MuiLink
-          href="/"
+          href="#reviews"
           isInverted={isScrollTriggered}
           transition={transition}
         >
@@ -106,17 +106,29 @@ const TopBar = () => {
         paddingTop={2}
       >
         <Box padding={1}>
-          <MuiLink href="/" transition={transition}>
+          <MuiLink
+            href="#home"
+            onClick={onToggleMobileMenu}
+            transition={transition}
+          >
             Home
           </MuiLink>
         </Box>
         <Box padding={1}>
-          <MuiLink href="/" transition={transition}>
-            About
+          <MuiLink
+            href="#services"
+            onClick={onToggleMobileMenu}
+            transition={transition}
+          >
+            Services
           </MuiLink>
         </Box>
         <Box padding={1}>
-          <MuiLink href="/" transition={transition}>
+          <MuiLink
+            href="#reviews"
+            onClick={onToggleMobileMenu}
+            transition={transition}
+          >
             Reviews
           </MuiLink>
         </Box>
