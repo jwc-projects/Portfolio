@@ -4,10 +4,12 @@ declare module "@mui/material/styles" {
   interface PaletteOptions {
     default?: PaletteOptions["primary"];
     inverted?: PaletteOptions["primary"];
+    transparent?: PaletteOptions["primary"];
   }
   interface Palette {
     default: Palette["primary"];
     inverted: Palette["primary"];
+    transparent: Palette["primary"];
   }
 }
 
@@ -46,6 +48,9 @@ const theme = createTheme({
       main: "#FFFFFF",
       dark: "#D1D1D1",
       contrastText: "#262626",
+    },
+    transparent: {
+      main: "rgba(0, 0, 0, 0)",
     },
     primary: {
       main: "#2C6396",
