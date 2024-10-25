@@ -19,7 +19,7 @@ function App() {
       <TopBar />
       <main>
         <Hero id="home" />
-        <Section isInverted>
+        <Section isInverted id="services">
           <Box
             display="flex"
             alignItems="center"
@@ -64,7 +64,7 @@ function App() {
             )}
           </Box>
         </Section>
-        <Section id="services">
+        <Section>
           <Box
             display="flex"
             alignItems={{ xs: "stretch", md: "center" }}

@@ -20,7 +20,7 @@ const Section: FunctionComponent<PropsWithChildren<SectionProps>> = ({
     <StyledSection
       component="section"
       paddingX={6}
-      paddingY={6}
+      paddingY={8}
       {...props}
       isInverted={isInverted}
     >
