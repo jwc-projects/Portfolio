@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { Hero, Quote, Section, TopBar } from "./components";
+import { CriticalLinks, Hero, Quote, Section, TopBar } from "./components";
 import StarryNightImageLg from "./images/winter-night-sky-large.jpg";
 import W3CImage from "./images/W3C_icon.png";
 
@@ -363,6 +363,7 @@ function App() {
             </Box>
           </Box>
         </Section>
+        <CriticalLinks />
       </main>
     </>
   );
