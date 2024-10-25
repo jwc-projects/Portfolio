@@ -5,7 +5,7 @@ const StyledAppBar = styled(AppBar, {
 })<{ isElevated: boolean }>(({ theme, isElevated }) => ({
   backgroundColor: isElevated
     ? theme.palette.default.main
-    : theme.palette.inverted.main,
+    : theme.palette.transparent.main,
   minHeight: isElevated ? 56 : 72,
   transition: theme.transitions.create("all", {
     duration: theme.transitions.duration.complex,
@@ -19,9 +19,7 @@ const StyledAppBar = styled(AppBar, {
     }),
   },
   ".color-default": {
-    color: isElevated
-      ? theme.palette.inverted.main
-      : theme.palette.default.main,
+    color: theme.palette.inverted.main,
     transition: theme.transitions.create("all", {
       duration: theme.transitions.duration.complex,
       easing: theme.transitions.easing.easeInOut,

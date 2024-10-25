@@ -5,15 +5,6 @@ const StyledLink = styled(Link, {
   shouldForwardProp: (name: string) =>
     !["isInverted", "transition"].includes(name),
 })<MuiLinkProps>(({ theme, isInverted, transition }) => ({
-  backgroundColor: isInverted
-    ? theme.palette.default.main
-    : theme.palette.inverted.main,
-  borderBottomColor: isInverted
-    ? theme.palette.default.main
-    : theme.palette.inverted.main,
-  borderTopColor: isInverted
-    ? theme.palette.default.main
-    : theme.palette.inverted.main,
   color: isInverted ? theme.palette.inverted.main : theme.palette.default.main,
   fontFamily: "Montserrat",
   fontSize: 10,

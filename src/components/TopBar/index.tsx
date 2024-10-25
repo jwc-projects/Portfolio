@@ -44,25 +44,13 @@ const TopBar = () => {
         <LogoDevIcon fontSize="large" className="color-default" />
       </Box>
       <Box component="nav">
-        <MuiLink
-          href="#home"
-          isInverted={isScrollTriggered}
-          transition={transition}
-        >
+        <MuiLink href="#home" isInverted transition={transition}>
           Home
         </MuiLink>
-        <MuiLink
-          href="#services"
-          isInverted={isScrollTriggered}
-          transition={transition}
-        >
+        <MuiLink href="#services" isInverted transition={transition}>
           Services
         </MuiLink>
-        <MuiLink
-          href="#reviews"
-          isInverted={isScrollTriggered}
-          transition={transition}
-        >
+        <MuiLink href="#reviews" isInverted transition={transition}>
           Reviews
         </MuiLink>
       </Box>
@@ -143,7 +131,6 @@ const TopBar = () => {
       >
         <Toolbar>{isDesktop ? DesktopBar : MobileBar}</Toolbar>
       </StyledAppBar>
-      <Offset />
       {!isDesktop && (
         <Drawer
           anchor="top"
@@ -161,3 +148,4 @@ const TopBar = () => {
 };
 
 export default TopBar;
+export { Offset };
