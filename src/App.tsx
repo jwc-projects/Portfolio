@@ -1,63 +1,28 @@
-import { Avatar, Box, Skeleton, Typography } from "@mui/material";
-import { Quote, Section, TopBar } from "./components";
+import {
+  Avatar,
+  Box,
+  Skeleton,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
+import { Hero, Quote, Section, TopBar } from "./components";
 import StarryNightImageLg from "./images/winter-night-sky-large.jpg";
+import W3CImage from "./images/W3C_icon.png";
 
 function App() {
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+
   return (
     <>
       <TopBar />
       <main>
-        <Section>
+        <Hero id="home" />
+        <Section isInverted>
           <Box
             display="flex"
             alignItems="center"
-            columnGap={11}
-            flexDirection={{ xs: "column", md: "row" }}
-          >
-            <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
-              <img src={StarryNightImageLg} role="presentation" width="100%" />
-            </Box>
-            <Box flex="1 1 0">
-              <Typography
-                component="h2"
-                variant="h2"
-                color="inverted.contrastText"
-                mb={2}
-              >
-                Experience
-              </Typography>
-              <Typography component="p" color="inverted.contrastText" mb={2}>
-                Navigating the digital marketplace is a huge challenge. You need
-                someone on your side with experience delivering against complex
-                requirements and tight deadlines. For nearly 6 years, I've been
-                delivering for some of the largest clients in the world. I'll
-                listen to your project's needs and goals and use them to craft
-                the website you need to enhance your business.
-              </Typography>
-            </Box>
-          </Box>
-        </Section>
-        <Section id="home">
-          <Typography component="h1" variant="h1">
-            JW Web Services
-          </Typography>
-        </Section>
-        <Section
-          id="services"
-          isInverted
-          sx={{
-            ".MuiSkeleton-root": {
-              backgroundColor: "rgba(200, 200, 200, 0.41)",
-              "&::after": {
-                background:
-                  "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent)",
-              },
-            },
-          }}
-        >
-          <Box
-            display="flex"
-            alignItems={{ xs: "stretch", md: "center" }}
             columnGap={11}
             flexDirection={{ xs: "column", md: "row" }}
           >
@@ -68,18 +33,55 @@ function App() {
                 color="default.contrastText"
                 mb={2}
               >
-                Responsive
+                Experience
               </Typography>
+              {!isDesktop && (
+                <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
+                  <img
+                    src={StarryNightImageLg}
+                    role="presentation"
+                    width="100%"
+                  />
+                </Box>
+              )}
               <Typography component="p" color="default.contrastText" mb={2}>
-                Investing in responsive web design is essential for your
-                business's success in today's digital landscape. With users
-                accessing websites from a variety of devices - smartphones,
-                tablets, laptops - having a site that automatically adapts to
-                different screen sizes ensures that all visitors have a
-                seamless, positive experience.
+                Navigating the digital marketplace is a huge challenge. You need
+                someone on your side with experience delivering against complex
+                requirements and tight deadlines. For nearly 6 years, I've been
+                delivering for some of the largest clients in the world. I'll
+                listen to your project's needs and goals and use them to craft
+                the website you need to enhance your business.
               </Typography>
             </Box>
+            {isDesktop && (
+              <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
+                <img
+                  src={StarryNightImageLg}
+                  role="presentation"
+                  width="100%"
+                />
+              </Box>
+            )}
+          </Box>
+        </Section>
+        <Section id="services">
+          <Box
+            display="flex"
+            alignItems={{ xs: "stretch", md: "center" }}
+            columnGap={11}
+            flexDirection={{ xs: "column", md: "row" }}
+          >
             <Box flex="1 1 0">
+              {!isDesktop && (
+                <Typography
+                  component="h2"
+                  variant="h2"
+                  color="inverted.contrastText"
+                  mb={2}
+                >
+                  Responsive
+                </Typography>
+              )}
               <Skeleton animation="wave" variant="circular">
                 <Avatar />
               </Skeleton>
@@ -189,28 +191,54 @@ function App() {
                 <Skeleton animation="wave" height={100}></Skeleton>
               </Box>
             </Box>
+            <Box flex="1 1 0">
+              {isDesktop && (
+                <Typography
+                  component="h2"
+                  variant="h2"
+                  color="inverted.contrastText"
+                  mb={2}
+                >
+                  Responsive
+                </Typography>
+              )}
+              <Typography component="p" color="inverted.contrastText" mb={2}>
+                Investing in responsive web design is essential for your
+                business's success in today's digital landscape. With users
+                accessing websites from a variety of devices - smartphones,
+                tablets, laptops - having a site that automatically adapts to
+                different screen sizes ensures that all visitors have a
+                seamless, positive experience.
+              </Typography>
+            </Box>
           </Box>
         </Section>
-        <Section>
+        <Section isInverted>
           <Box
             display="flex"
             alignItems="center"
             columnGap={11}
             flexDirection={{ xs: "column", md: "row" }}
           >
-            <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
-              <img src={StarryNightImageLg} role="presentation" width="100%" />
-            </Box>
             <Box flex="1 1 0">
               <Typography
                 component="h2"
                 variant="h2"
-                color="inverted.contrastText"
+                color="default.contrastText"
                 mb={2}
               >
                 Professional
               </Typography>
-              <Typography component="p" color="inverted.contrastText" mb={2}>
+              {!isDesktop && (
+                <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
+                  <img
+                    src={StarryNightImageLg}
+                    role="presentation"
+                    width="100%"
+                  />
+                </Box>
+              )}
+              <Typography component="p" color="default.contrastText" mb={2}>
                 In today's digital markets, a website is critical for any
                 business looking to succeed. A website can act as a storefront
                 showcasing your products and services 24/7. It builds
@@ -220,6 +248,56 @@ function App() {
                 customers and generate leads. Not having a website is
                 deliberately cutting out key opportunities to grow and compete
                 in your business's market.
+              </Typography>
+            </Box>
+            {isDesktop && (
+              <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
+                <img
+                  src={StarryNightImageLg}
+                  role="presentation"
+                  width="100%"
+                />
+              </Box>
+            )}
+          </Box>
+        </Section>
+        <Section>
+          <Box
+            display="flex"
+            alignItems="center"
+            columnGap={11}
+            flexDirection={{ xs: "column", md: "row" }}
+          >
+            {isDesktop && (
+              <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
+                <img src={W3CImage} role="presentation" width="100%" />
+              </Box>
+            )}
+            <Box flex="1 1 0">
+              <Typography
+                component="h2"
+                variant="h2"
+                color="inverted.contrastText"
+                mb={2}
+              >
+                Accessibility
+              </Typography>
+              {!isDesktop && (
+                <Box
+                  flex="1 1 0"
+                  mb={{ xs: 2, md: 0 }}
+                  sx={{ img: { maxWidth: 300 } }}
+                >
+                  <img src={W3CImage} role="presentation" width="100%" />
+                </Box>
+              )}
+              <Typography component="p" color="inverted.contrastText" mb={2}>
+                Navigating the digital marketplace is a huge challenge. You need
+                someone on your side with experience delivering against complex
+                requirements and tight deadlines. For nearly 6 years, I've been
+                delivering for some of the largest clients in the world. I'll
+                listen to your project's needs and goals and use them to craft
+                the website you need to enhance your business.
               </Typography>
             </Box>
           </Box>
