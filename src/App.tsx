@@ -292,12 +292,19 @@ function App() {
                 </Box>
               )}
               <Typography component="p" color="inverted.contrastText" mb={2}>
-                Navigating the digital marketplace is a huge challenge. You need
-                someone on your side with experience delivering against complex
-                requirements and tight deadlines. For nearly 6 years, I've been
-                delivering for some of the largest clients in the world. I'll
-                listen to your project's needs and goals and use them to craft
-                the website you need to enhance your business.
+                Web accessibility is crucial for your business! Accessibility
+                expands reach, enhances user experience, and ensures legal
+                compliance. By making websites accessible to people with
+                disabilities—such as those with visual, auditory, motor, or
+                cognitive impairments—businesses open their services to a
+                broader audience, including the millions globally who rely on
+                accessible design to navigate online. Additionally, approaching
+                web design with accessibility in mind helps to create a more
+                consistent and user-friendly experience. Furthermore, compliance
+                with accessibility standards helps businesses avoid potential
+                legal issues, as many regions enforce accessibility
+                requirements. Investing in web accessibility is both a business
+                advantage and a social responsibility.
               </Typography>
             </Box>
           </Box>
