@@ -11,4 +11,4 @@
 - Selecting and buying a theme to customize
 - Breaking the theme down into it's components in Figma
 - Selecting technologies for the project
-- Create and deliver via GH pages
+- Push to VPS provider
