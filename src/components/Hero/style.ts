@@ -11,7 +11,7 @@ const StyledBlackOverlay = styled(Box)(() => ({
   right: 0,
 }));
 const StyledHeroBox = styled(Box)(() => ({
-  width: "100vw",
+  width: "100%",
   height: "100vh",
   backgroundImage: `url(${MountainDayImageLg})`,
   backgroundSize: "cover",
