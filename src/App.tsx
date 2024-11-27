@@ -39,17 +39,17 @@ function App() {
                 <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
                   <img
                     src={StarryNightImageLg}
-                    role="presentation"
                     width="100%"
+                    alt=""
                   />
                 </Box>
               )}
               <Typography component="p" color="default.contrastText" mb={2}>
                 Navigating the digital marketplace is a huge challenge. You need
                 someone on your side with experience delivering against complex
-                requirements and tight deadlines. For nearly 6 years, I've been
-                delivering for some of the largest clients in the world. I'll
-                listen to your project's needs and goals and use them to craft
+                requirements and tight deadlines. For nearly 6 years, I&apos;ve been
+                delivering for some of the largest clients in the world. I&apos;ll
+                listen to your project&apos;s needs and goals and use them to craft
                 the website you need to enhance your business.
               </Typography>
             </Box>
@@ -57,8 +57,8 @@ function App() {
               <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
                 <img
                   src={StarryNightImageLg}
-                  role="presentation"
                   width="100%"
+                  alt=""
                 />
               </Box>
             )}
@@ -204,7 +204,7 @@ function App() {
               )}
               <Typography component="p" color="inverted.contrastText" mb={2}>
                 Investing in responsive web design is essential for your
-                business's success in today's digital landscape. With users
+                business&apos;s success in today&apos;s digital landscape. With users
                 accessing websites from a variety of devices - smartphones,
                 tablets, laptops - having a site that automatically adapts to
                 different screen sizes ensures that all visitors have a
@@ -233,13 +233,13 @@ function App() {
                 <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
                   <img
                     src={StarryNightImageLg}
-                    role="presentation"
                     width="100%"
+                    alt=""
                   />
                 </Box>
               )}
               <Typography component="p" color="default.contrastText" mb={2}>
-                In today's digital markets, a website is critical for any
+                In today&apos;s digital markets, a website is critical for any
                 business looking to succeed. A website can act as a storefront
                 showcasing your products and services 24/7. It builds
                 credibility, giving your business legitimacy in the eyes of
@@ -247,15 +247,15 @@ function App() {
                 It can allow you to reach a wider audience, engage with your
                 customers and generate leads. Not having a website is
                 deliberately cutting out key opportunities to grow and compete
-                in your business's market.
+                in your business&apos;s market.
               </Typography>
             </Box>
             {isDesktop && (
               <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
                 <img
                   src={StarryNightImageLg}
-                  role="presentation"
                   width="100%"
+                  alt=""
                 />
               </Box>
             )}
@@ -270,7 +270,7 @@ function App() {
           >
             {isDesktop && (
               <Box flex="1 1 0" mb={{ xs: 2, md: 0 }}>
-                <img src={W3CImage} role="presentation" width="100%" />
+                <img src={W3CImage} width="100%" alt="" />
               </Box>
             )}
             <Box flex="1 1 0">
@@ -288,7 +288,7 @@ function App() {
                   mb={{ xs: 2, md: 0 }}
                   sx={{ img: { maxWidth: 300 } }}
                 >
-                  <img src={W3CImage} role="presentation" width="100%" />
+                  <img src={W3CImage} width="100%" alt="" />
                 </Box>
               )}
               <Typography component="p" color="inverted.contrastText" mb={2}>
@@ -335,11 +335,11 @@ function App() {
                 isInverted
               >
                 Our client had a 3rd party audit done for WCAG compliance and
-                it's been challenging because of the timing against our launch
+                it&apos;s been challenging because of the timing against our launch
                 overlapping 5 websites. Justin [took] ownership of the
                 remediation handling triage, supporting and teaching others,
                 providing clear daily updates and coordinating between our
-                developers and the auditors. I can't say enough good things!
+                developers and the auditors. I can&apos;t say enough good things!
               </Quote>
             </Box>
             <Box>
@@ -360,7 +360,7 @@ function App() {
                 alignment="right"
                 isInverted
               >
-                When he joined our team, it was obvious he'd found his calling.
+                When he joined our team, it was obvious he&apos;d found his calling.
                 His greatest strengths are his reliability and proactive
                 approach. He tackles complex problems with ease and provides
                 feedback that helps us deliver top-notch results to our clients.
